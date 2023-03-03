@@ -7,44 +7,71 @@ import Desktop from '@/features/common/modules/Navigation/components/Desktop'
 import { Moon } from '@/features/common/modules/Navigation/icons/Moon'
 import { Sun } from '@/features/common/modules/Navigation/icons/Sun'
 import { useState, useEffect } from 'react'
+import useIsDesktop from '@/features/common/modules/Hooks/useIstDesktop'
+import DesktopLayout from '@/features/Layouts/DesktopLayout'
+import MobileLayout from '@/features/Layouts/MobileLayout'
 
 const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
 
-//   const [darkMode, setDarkMode] = useState(undefined)
+const {isDesktop} = useIsDesktop()
 
-//   const switchMode = () => {
-//     setDarkMode(!darkMode)
-//   }
+console.log(isDesktop)
 
-//   useEffect(() => {
-//     if(darkMode) {
-//         localStorage.setItem("darkMode", "true")
-//         window.document.documentElement.classList.add('dark')
-//     } else if (darkMode === false){
-//         localStorage.setItem("darkMode", "false")
-//         window.document.documentElement.classList.remove('dark')
-//     } else{
-//         setDarkMode(localStorage.getItem("darkMode") === "true")
-//     }
-// }, [darkMode])
+const CurrentLayout = isDesktop ? DesktopLayout : MobileLayout
 
 
   return (
-  
-  <div>
-    {/* <div>
-    {!darkMode ? (
-        <Moon width="40px" height="40px" onClick={switchMode}/> ) : (
-        <Sun width="40px" height="40px" onClick={switchMode}/>
-        ) 
-      }
+   <CurrentLayout>
+    CONTENT
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
 
-    </div> */}
-
-    <Navigation />
+   </CurrentLayout>
+  
+    
+    
   
   
-  </div>
   )
 }

@@ -9,7 +9,7 @@ function Mobile() {
   const size="75%"
   return (
     <>
-    <nav className='sticky w-1/2 p-1 mx-auto mt-5 font-bold rounded-full shadow-sm shadow-slate-400 h-15 md:hidden bg-slate-600'>
+    <nav className='sticky w-1/2 p-1 mx-auto mt-5 font-bold rounded-full shadow-sm bottom-10 shadow-slate-400 h-15 md:hidden bg-slate-600'>
 
 
           <ul className='flex items-center justify-center flex-1 p-1 text-gray-400'>
