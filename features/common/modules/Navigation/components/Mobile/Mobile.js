@@ -6,21 +6,24 @@ import { MessageIcon } from '../../icons/Message'
 import { PersonIcon } from '../../icons/Person'
 
 function Mobile() {
-  const size="35px"
+  const size="75%"
   return (
     <>
-    <nav className=' shadow-sm shadow-slate-400 sticky font-bold h-15 mt-5 w-1/2 p-4 mx-auto rounded-full md:hidden bg-slate-600'>
-      <div className=' flex-initial items-center'>
-        <div className='text-white flex justify-between mx-auto'>
+    <nav className='sticky w-1/2 p-1 mx-auto mt-5 font-bold rounded-full shadow-sm shadow-slate-400 h-15 md:hidden bg-slate-600'>
 
-          <HomeIcon height={size} width={size} className="mx-1"/>
-          <PersonIcon height={size} width={size} className="mx-1"/>
-          <Laptop height={size} width={size} className="mx-1"/>
-          <SkillList height={size} width={size} className="mx-1"/>
-          <MessageIcon height={size} width={size} className="mx-1"/>
-        </div>
 
-      </div>
+          <ul className='flex items-center justify-center flex-1 p-1 text-gray-400'>
+            <li><HomeIcon height={size} width={size} className='m-auto' /></li>
+            <li><PersonIcon height={size} width={size} className='m-auto' /></li>
+            <li><Laptop height={size} width={size} className='m-auto'  /></li>
+            <li><SkillList height={size} width={size} className='m-auto' /></li>
+            <li><MessageIcon height={size} width={size} className='m-auto'  /></li>
+
+          </ul>
+
+        
+
+      
 
     </nav>
     
