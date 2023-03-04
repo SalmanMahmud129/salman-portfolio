@@ -31,8 +31,8 @@ function HeroSection() {
           </p>
 
           <div className="flex justify-between mt-4">
-            <button className="flex items-center p-2 text-xl font-light duration-200 cursor-pointer rounded-xl w-30 bg-gradient-to-r from-cyan-500 to-blue-500 hover:scale-110 hover:bg-slate-200 hover:text-black">
-              My Resume <span><ResumeIcon height="5%" width="2rem" /></span>
+            <button className="flex items-center p-2 text-xl font-light duration-200 cursor-pointer  group rounded-xl w-30 bg-gradient-to-r from-cyan-500 to-blue-500 hover:scale-110 hover:bg-slate-200 hover:text-black">
+              My Resume <span className='group-hover:animate-bounce'><ResumeIcon height="5%" width="2rem" /></span>
             </button>
             {socialMediaLinks.map(({ Icon, url }) => (
               <a key={url} href={url}>
