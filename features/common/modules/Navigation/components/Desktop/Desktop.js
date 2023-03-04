@@ -30,14 +30,14 @@ function Desktop() {
   ]
 
   return (
-    <div className=" hidden md:flex md:h-20 items-center text-white bg-slate-600 mx-1 my-2 p-2 rounded-lg justify-between ">
+    <div className="sticky top-0 items-center justify-between hidden p-2 mx-1 my-2 text-white rounded-lg md:flex md:h-20 bg-slate-600 ">
     <div>
-      <h1 className="text-4xl font-light"><strong className="font-bold">Salman</strong> Mahmud </h1>
+      <h1 className="m-2 text-4xl font-light duration-200 hover:scale-110"><strong className="font-bold">Salman</strong> Mahmud </h1>
     </div>
 
     <ul className="flex">
       {links.map(link =>{
-       return <li key={link.id} className="px-4 cursor-pointer capitalize font-medium text-blue-300 hover:scale-110 duration-200">{link.link}</li>
+       return <li key={link.id} className="px-4 font-medium text-blue-300 capitalize duration-200 cursor-pointer hover:scale-110 hover:bg-slate-900 hover:rounded-xl">{link.link}</li>
       })}
       
 
