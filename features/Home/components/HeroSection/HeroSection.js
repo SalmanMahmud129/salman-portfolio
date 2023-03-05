@@ -20,8 +20,8 @@ function HeroSection() {
 
   return (
     <section name="hero" className="w-full h-screen bg-blue-300/10">
-      <div className="flex flex-col items-center justify-center h-full max-w-screen-lg px-4 mx-auto md:flex-row md:mx-auto bg-blue-600/5 ">
-        <div className=" md:w-2/3">
+      <div className="flex flex-col items-center justify-center h-full max-w-screen-xl px-4 mx-auto md:flex-row md:mx-auto bg-blue-600/5 ">
+        <div className=" md:w-1/3 md: mr-5">
           <Image
             src={Profile}
             alt="me"
@@ -32,7 +32,7 @@ function HeroSection() {
           <h2 className="text-4xl font-medium sm:text-center right-1 md:text-7xl md:text-left">
             Hi! My name is Salman
           </h2>
-          <p className="py-4 mt-4 text-center text-gray-400 md:text-left">
+          <p className="sm:py-4 md:py-10 text-center text-gray-400 md:text-left">
             A{' '}
             <strong className=" text-sky-400">
               Full-Stack Software Developer
