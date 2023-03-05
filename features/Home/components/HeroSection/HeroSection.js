@@ -21,7 +21,7 @@ function HeroSection() {
   return (
     <section name="hero" className="w-full h-screen bg-blue-300/10">
       <div className="flex flex-col items-center justify-center h-full max-w-screen-xl px-4 mx-auto md:flex-row md:mx-auto bg-blue-600/5 ">
-        <div className=" md:w-1/3 md: mr-5">
+        <div className=" md:w-1/3 md:mr-5">
           <Image
             src={Profile}
             alt="me"
@@ -72,8 +72,9 @@ function ResumePopup({handleShowResume}){
   console.log("clicked")
 
   return(
+    <>
     <div className='fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-xl '>
-      <div className='md:p-8 sm:h-2/5 sm:w-4/5 md:h-4/6 md:w-1/2 relative bg-blue-400/50 rounded-lg shadow-lg'>
+      <div className='md:p-8 xs:h-3/5 xs:w-11/12 md:h-4/6 md:w-1/2 relative bg-blue-400/50 rounded-lg shadow-lg'>
         <button onClick={handleShowResume} className='absolute text-gray-400 hover:text-gray-600 top-2 right-2 sm:top-0 sm:right-0'>
           <CloseIcon height="1.5rem" width="1.5rem"/>
         </button>
@@ -87,8 +88,12 @@ function ResumePopup({handleShowResume}){
 
       </div>
     </div>
-    
+    <div>
+      Hellllllllllllllo
+    </div>
+    </>  
   )
+  
 
 }
 
