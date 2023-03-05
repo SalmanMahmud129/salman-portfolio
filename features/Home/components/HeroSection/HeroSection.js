@@ -73,7 +73,7 @@ function ResumePopup({handleShowResume}){
 
   return(
     <div className='fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-xl '>
-      <div className='relative p-8 bg-blue-400/50 rounded-lg shadow-lg'>
+      <div className='p-8 md:h-4/6 md:w-1/2 relative bg-blue-400/50 rounded-lg shadow-lg'>
         <button onClick={handleShowResume} className='absolute text-gray-400 hover:text-gray-600 top-2 right-2'>
           <CloseIcon height="1.5rem" width="1.5rem"/>
         </button>
@@ -83,7 +83,7 @@ function ResumePopup({handleShowResume}){
         }
 
 
-        <iframe src="https://drive.google.com/file/d/1HWunZ_wsP4PNN2zDIEQILFo8T0R0Uoda/preview" width="640" height="480" allow="autoplay" onLoad={handleLoadStatus} style={{display: isLoading ? "none" : "block"}} className=' min-w-fit' />
+        <iframe src="https://drive.google.com/file/d/1HWunZ_wsP4PNN2zDIEQILFo8T0R0Uoda/preview" width="100%" height="100%" allow="autoplay" onLoad={handleLoadStatus} style={{display: isLoading ? "none" : "block"}} className='min-w-fit' />
 
       </div>
     </div>
