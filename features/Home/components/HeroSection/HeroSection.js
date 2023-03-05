@@ -4,7 +4,7 @@ import { ResumeIcon } from './Icons/ResumeIcon';
 import socialMediaLinks from './socialMediaLinks'
 import { useState } from 'react';
 import { CloseIcon } from './Icons/CloseIcon';
-import { Spinner } from './Icons/Spinner';
+
 
 
 
@@ -72,7 +72,6 @@ function ResumePopup({handleShowResume}){
   console.log("clicked")
 
   return(
-    <>
     <div className='fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-xl '>
       <div className='md:p-8 xs:h-3/5 xs:w-11/12 md:h-4/6 md:w-1/2 relative bg-blue-400/50 rounded-lg shadow-lg'>
         <button onClick={handleShowResume} className='absolute text-gray-400 hover:text-gray-600 top-2 right-2 sm:top-0 sm:right-0'>
@@ -88,10 +87,7 @@ function ResumePopup({handleShowResume}){
 
       </div>
     </div>
-    <div>
-      Hellllllllllllllo
-    </div>
-    </>  
+    
   )
   
 
@@ -100,10 +96,18 @@ function ResumePopup({handleShowResume}){
 
 function Loading(){
   return(
-    <div className='absolute inset-0 flex items-center justify-center'>
-      <svg className=" text-indigo-400" viewBox="0 0 24 24"> <Spinner/>  </svg>
-
-    </div>
+    <div className='relative min-h-screen w-full flex justify-center'>
+    <svg class=" w-40 h-40 animate-spin text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 4.75V6.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+      <path d="M17.1266 6.87347L16.0659 7.93413" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+      <path d="M19.25 12L17.75 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+      <path d="M17.1266 17.1265L16.0659 16.0659" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+      <path d="M12 17.75V19.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+      <path d="M7.9342 16.0659L6.87354 17.1265" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+      <path d="M6.25 12L4.75 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+      <path d="M7.9342 7.93413L6.87354 6.87347" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+</div>
 
   )
 }
