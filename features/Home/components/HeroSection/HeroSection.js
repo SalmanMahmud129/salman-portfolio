@@ -73,8 +73,8 @@ function ResumePopup({handleShowResume}){
 
   return(
     <div className='fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-xl '>
-      <div className='p-8 md:h-4/6 md:w-1/2 relative bg-blue-400/50 rounded-lg shadow-lg'>
-        <button onClick={handleShowResume} className='absolute text-gray-400 hover:text-gray-600 top-2 right-2'>
+      <div className='md:p-8 sm:h-2/5 sm:w-4/5 md:h-4/6 md:w-1/2 relative bg-blue-400/50 rounded-lg shadow-lg'>
+        <button onClick={handleShowResume} className='absolute text-gray-400 hover:text-gray-600 top-2 right-2 sm:top-0 sm:right-0'>
           <CloseIcon height="1.5rem" width="1.5rem"/>
         </button>
 
