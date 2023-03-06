@@ -4,6 +4,9 @@ import { ResumeIcon } from './Icons/ResumeIcon';
 import socialMediaLinks from './socialMediaLinks'
 import { useState } from 'react';
 import { CloseIcon } from './Icons/CloseIcon';
+import useIsDesktop from '@/features/common/Hooks/useIstDesktop';
+
+
 
 
 
@@ -11,6 +14,7 @@ import { CloseIcon } from './Icons/CloseIcon';
 
 
 function HeroSection() {
+
 
   const [showResume, setShowResume] = useState(false)
 
@@ -63,6 +67,8 @@ export default HeroSection;
 
 function ResumePopup({handleShowResume}){
 
+  const {isDesktop} = useIsDesktop
+
   const [isLoading, setIsLoading] = useState(true)
 
   const handleLoadStatus = () =>{
@@ -84,6 +90,17 @@ function ResumePopup({handleShowResume}){
 
 
         <iframe src="https://drive.google.com/file/d/1HWunZ_wsP4PNN2zDIEQILFo8T0R0Uoda/preview" width="100%" height="100%" allow="autoplay" onLoad={handleLoadStatus} style={{display: isLoading ? "none" : "block"}} className='min-w-fit' />
+        
+        <div className='mt-10'>
+        <a href='https://drive.google.com/uc?export=download&id=1HWunZ_wsP4PNN2zDIEQILFo8T0R0Uoda' target='_blank' rel='noreferrer'>
+        <button className="sm:hidden mx-auto md:flex items-center p-2 text-xl font-light duration-200 cursor-pointer group rounded-xl w-30 bg-gradient-to-r from-cyan-500 to-blue-500 hover:scale-110 hover:bg-slate-200 hover:text-black">
+              Download <span className='group-hover:animate-bounce'><ResumeIcon height="5%" width="2rem" /></span>
+        </button>
+
+        </a>
+
+        </div>
+        
 
       </div>
     </div>
