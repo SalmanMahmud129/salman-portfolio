@@ -11,6 +11,7 @@ import useIsDesktop from '@/features/common/Hooks/useIstDesktop'
 import DesktopLayout from '@/features/Layouts/DesktopLayout'
 import MobileLayout from '@/features/Layouts/MobileLayout'
 import HeroSection from '@/features/Home/components/HeroSection'
+import About from '@/features/Home/components/AboutSection/About'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -25,10 +26,10 @@ const CurrentLayout = isDesktop ? DesktopLayout : MobileLayout
   return (
    <CurrentLayout>
     <HeroSection/>
-    CONTENT
     <br></br>
     <br></br>
     <br></br>
+    <About/>
     <br></br>
     <br></br>
     <br></br>
