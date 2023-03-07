@@ -9,12 +9,14 @@ export default projects = [
         name: "Real Estate Next",
         image: './RealEstate.png',
         description: 'My introduction to Next.js and Chakra ui. Mock front-end for a real estate company with data pull from Bayut Api',
-        github: "https://github.com/SalmanMahmud129/real-estate-next"
+        github: "https://github.com/SalmanMahmud129/real-estate-next",
+        deployment: "https://real-estate-next-iota.vercel.app/"
     },
     {
         name: "My Portfolio",
         image: "",
         description: "The website you are on currently!",
-        github: "https://github.com/SalmanMahmud129/salman-portfolio"
+        github: "https://github.com/SalmanMahmud129/salman-portfolio",
+        deployment: "https://salman-portfolio-two.vercel.app/"
     }
 ]
