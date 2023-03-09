@@ -1,14 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ProjectCard from './components/ProjectCard'
 import { motion } from 'framer-motion'
+import { projects } from './components/ProjectCard/projectConsts'
+import { staggerContainer } from './motion'
+
+
 
 
 
 
 function ProjectShowcase() {
+  console.log('projects', projects)
+
+  const [active, setActive] = useState('project-1')
   return (
     <section name='projects' className='w-full h-11/12 bg-blue-300/10' >
-      <div  className=' max-w-screen-xl px-5 py-10 mx-auto flex flex-col justify-center w-full h-full'>
+      <motion.div variants={staggerContainer} initial="hidden" whileInView='show' viewport={{once: false, amount: 0.25}}  className=' max-w-screen-xl px-5 py-10 mx-auto flex flex-col justify-center w-full h-full'>
         
         <motion.div initial={{ opacity: 0, y: -50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 2 }} viewport={{once:true}} className="xs:pt-10 md:pt-0 ">
           <p className='xs:text-xl md:text-4xl font-medium inline border-b-4 border-blue-400'>
@@ -16,20 +23,21 @@ function ProjectShowcase() {
           </p>
         </motion.div>
 
-        <div className='flex items-center justify-center my-10'>
+        
+
+        
+          <motion.div className='flex mt-20 md:flex-row flex-col gap-5'>
+            {projects.map((project, index) =><ProjectCard key={project.name} {...project} active={active} handleClick={setActive} index={index}/>)}
+            
+
+          </motion.div>
+
+        
 
 
-          <div className='flex '>
-          <ProjectCard/>
-          <ProjectCard/>
-          <ProjectCard/>
-          <ProjectCard/>
-
-          </div>
-        </div>
 
 
-      </div>
+      </motion.div>
       
     </section>
   )
