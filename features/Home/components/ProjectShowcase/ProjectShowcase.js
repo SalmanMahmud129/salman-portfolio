@@ -26,7 +26,7 @@ function ProjectShowcase() {
         
 
         
-          <motion.div className='flex mt-20 md:flex-row flex-col gap-5 min-h-[80vh]'>
+          <motion.div className='flex mt-20 md:flex-row flex-col gap-5 min-h-[110vh]'>
             {projects.map((project, index) =><ProjectCard key={project.name} {...project} active={active} handleClick={setActive} index={index}/>)}
             
 
