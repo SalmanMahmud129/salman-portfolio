@@ -38,11 +38,24 @@ function Mobile() {
   ]
   return (
     <>
-    <nav className='sticky w-4/5 p-1 mx-auto mt-5 font-bold rounded-full shadow-sm bottom-8 shadow-slate-400 h-15 md:hidden bg-slate-600'>
+    <nav className='sticky w-4/5 p-1 mx-auto mt-5 font-bold rounded-full shadow-sm bottom-8 shadow-blue-400 h-15 md:hidden bg-gradient-to-b from-cyan-500 to-blue-500'>
 
 
-          <ul className='flex items-center justify-center flex-1 p-1 text-blue-300'>
-            {icons.map((Icon) => <li><Link to={Icon.link} smooth duration={500}><Icon.icon height={size} width={size} className='m-auto' /></Link></li>)}
+          <ul className='flex items-center justify-center flex-1 p-1 '>
+          {icons.map((icon) => (
+            <li key={icon.id}>
+              <Link
+                to={icon.link}
+                activeClass="activeMobile"
+                spy={true}
+                smooth={true}
+                duration={500}
+              >
+                <icon.icon height={size} width={size} className='m-auto' />
+              </Link>
+            </li>
+          ))}
+            {/* {icons.map((Icon) => <li><Link to={Icon.link} activeClass="activeMobile" smooth spy duration={500}><Icon.icon height={size} width={size} className='m-auto' /></Link></li>)} */}
           </ul>
 
         
