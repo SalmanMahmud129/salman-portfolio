@@ -13,6 +13,7 @@ import { LogosTailwindcssIcon } from "@/features/common/Icons/TailwindIcon"
 import { GitHubIcon } from "@/features/common/Icons/GithubIcon"
 import { LogosPostmanIcon } from "@/features/common/Icons/PostmanIcon"
 import { LogosStripe } from "@/features/common/Icons/StripeIcon"
+import { TablerBrandFramerMotion } from "@/features/common/Icons/FramerMotion"
 
 
 export const skills = [
@@ -77,6 +78,11 @@ export const skills = [
         id: 12,
         skill: "Tailwind CSS",
         Icon: LogosTailwindcssIcon
+    },
+    {
+        id:16,
+        skill: "Framer Motion",
+        Icon: TablerBrandFramerMotion
     },
     {
         id: 13,
