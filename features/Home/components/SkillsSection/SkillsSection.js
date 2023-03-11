@@ -1,6 +1,8 @@
 import React from 'react'
 import { LogosJavascript } from '@/features/common/Icons/JavascriptIcon'
 import { motion } from 'framer-motion'
+import { skills } from './skillConsts'
+import SkillCard from './SkillCard/SkillCard'
 
 function SkillsSection() {
   return (
@@ -11,14 +13,13 @@ function SkillsSection() {
 
             </motion.div>
 
-            <div>
-                <div className='w-full grid grid-cols-3'>
-                    <LogosJavascript/>
-                    <p>Javascript</p>
-                    <LogosJavascript/>
-                    <p>Javascript</p>
-                </div>
-            </div>
+           
+            <motion.div initial={{opacity: 0}} whileInView={{opacity:1}} transition={{duration: 2}} className='md:w-1/2 mx-auto grid grid-cols-3 md:grid-cols-4 gap-5 text-center py-20'>
+              {skills.map((skill, index) => <SkillCard key={skill.id} {...skill} index={index} /> )}
+
+
+            </motion.div>
+            
         </div>
 
     </section>

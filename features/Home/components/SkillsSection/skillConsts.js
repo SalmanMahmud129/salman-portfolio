@@ -19,79 +19,79 @@ export const skills = [
     {
         id: 1,
         skill: "Javascript",
-        icon: LogosJavascript
+        Icon: LogosJavascript
 
     },
     {
         id: 2,
         skill: "React.js",
-        icon: LogosReact
+        Icon: LogosReact
 
     },
     {
         id: 3,
         skill: "Next.js",
-        icon: LogosNextjsIcon
+        Icon: LogosNextjsIcon
     },
     {
         id: 4,
         skill: "Ruby",
-        icon: LogosRuby
+        Icon: LogosRuby
     },
     {
         id: 5,
         skill: "Ruby on Rails",
-        icon: LogosRails
+        Icon: LogosRails
     },
     {
         id: 6,
         skill: "PostgreSQL",
-        icon: LogosPostgresql
+        Icon: LogosPostgresql
     },
     {
         id: 7,
         skill: "SQLite",
-        icon: LogosSqlite
+        Icon: LogosSqlite
     },
     {
         id: 8,
         skill: "HTML",
-        icon: LogosHtml5
+        Icon: LogosHtml5
     },
     {
         id: 9,
         skill: "CSS",
-        icon: LogosCss3
+        Icon: LogosCss3
     },
     {
         id: 10,
         skill: "Semantic-Ui",
-        icon: LogosSemanticUi
+        Icon: LogosSemanticUi
     },
     {
         id: 11,
         skill: "Chakra-Ui",
-        icon: ChakraIcon
+        Icon: ChakraIcon
     },
     {
         id: 12,
         skill: "Tailwind CSS",
-        icon: LogosTailwindcssIcon
+        Icon: LogosTailwindcssIcon
     },
     {
         id: 13,
         skill: "Git/Github",
-        icon: GitHubIcon
+        Icon: GitHubIcon
     },
     {
         id: 14,
         skill: "Postman",
-        icon: LogosPostmanIcon
+        Icon: LogosPostmanIcon
     },
     {
         id: 15,
         skill: "Stripe",
-        icon: LogosStripe
+        Icon: LogosStripe
     }
 
 ]
