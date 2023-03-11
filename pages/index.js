@@ -14,6 +14,7 @@ import HeroSection from '@/features/Home/components/HeroSection'
 import About from '@/features/Home/components/AboutSection/About'
 import ProjectShowcase from '@/features/Home/components/ProjectShowcase'
 import SkillsSection from '@/features/Home/components/SkillsSection'
+import ContactSection from '@/features/Home/components/ContactSection/ContactSection'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -43,6 +44,7 @@ const CurrentLayout = isDesktop ? DesktopLayout : MobileLayout
     <br></br>
     <br></br>
     <br></br>
+    <ContactSection/>
     <br></br>
     <br></br>
     <br></br>

@@ -1,6 +1,4 @@
-import { useState, useEffect} from "react"
-import { Sun } from "../../icons/Sun"
-import { Moon } from "../../icons/Moon"
+import { Link } from "react-scroll"
 
 
 
@@ -37,7 +35,7 @@ function Desktop() {
 
     <ul className="flex">
       {links.map(link =>{
-       return <li key={link.id} className="px-4 font-medium text-blue-300 capitalize duration-200 cursor-pointer hover:scale-110 hover:bg-slate-900 hover:rounded-xl">{link.link}</li>
+       return <li key={link.id} className="px-4 font-medium text-blue-300 capitalize duration-200 cursor-pointer hover:scale-110 hover:bg-slate-900 hover:rounded-xl"><Link to={link.link} smooth duration={500}>{link.link}</Link></li>
       })}
       
 

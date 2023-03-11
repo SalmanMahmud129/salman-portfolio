@@ -27,7 +27,7 @@ function HeroSection() {
 
 
   return (
-    <section name="hero" className="w-full h-screen bg-blue-300/10">
+    <section name="home" className="w-full h-screen bg-blue-300/10">
       <motion.div  className="flex flex-col items-center justify-center h-full max-w-screen-xl px-4 mx-auto md:flex-row md:mx-auto bg-blue-600/5 ">
         <motion.div initial={{ opacity: 0, y:-50 }} animate={ { opacity: 1, y:0 } } transition={{delay: 4, duration: 2 }} className=" md:w-1/3 md:mr-5">
           <Image

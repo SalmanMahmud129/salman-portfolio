@@ -11,7 +11,7 @@ function SkillCard({skill, Icon, index}) {
 
       </Icon>
 
-      <p className='md:text-center'>{skill}</p>
+      <p className='md:text-center font-light'>{skill}</p>
     </motion.div>
   )
 }
