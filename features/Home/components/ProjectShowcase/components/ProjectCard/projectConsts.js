@@ -39,7 +39,7 @@ export const projects = [
         id: 'project-4',
         name: "Flatiron Brewery",
         image: "/BreweryThumb.PNG",
-        description: "My intro to React/React-Router, front-end that pulls data from a mock JSON back-end and displays them. Ability to add/remove beverages. ",
+        description: "My intro to React/React-Router, front-end that pulls beverage data from a mock JSON back-end and displays them. Ability to add/remove beverages. ",
         github: "https://github.com/SalmanMahmud129/flatiron-brewery",
         icons: [LogosReact]
         
