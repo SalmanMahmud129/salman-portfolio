@@ -9,7 +9,7 @@ function About() {
         <div className="max-w-screen-xl px-5 py-10 mx-auto flex flex-col justify-center w-full h-full">
             
             <motion.div initial={{ opacity: 0, y:-50 }} whileInView={ { opacity: 1, y:0 } } transition={{ duration: 2 }} viewport={{once:true}} className="xs:pt-10 md:pt-0 ">
-                <p className=" sm:text-xl md:text-4xl font-medium inline border-b-4 border-blue-400">A Little Bit About Me</p>
+                <p className=" sm:text-xl md:text-4xl font-medium inline border-b-4 border-blue-400">About Me</p>
             </motion.div>
             
             <div className='flex justify-around mt-12 md:mb-12'>
