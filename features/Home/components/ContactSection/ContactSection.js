@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import emailjs from 'emailjs-com';
 
@@ -8,37 +8,38 @@ import emailjs from 'emailjs-com';
 function ContactSection() {
     const [loading, setLoading] = useState(false)
 
+    const form = useRef()
+
+    //state is only for determining if button is disabled. UseRef is for the emailsubmit
     const [formData, setFormData] = useState({
-        name: "",
-        email: "",
-        message: ""
+        user_name: '',
+        user_email: '',
+        message: ''
     })
+
+    const handleChange = (e) => {
+        const {name, value } = e.target
+
+        setFormData({...formData, [name]: value})
+    }
+
+    const isFormFilled = formData.name !== "" && formData.email !== "" && formData.message !== "";
 
     const handleSubmit = (e) =>{
         e.preventDefault()
 
         setLoading(true)
 
-        emailjs.send(
+        emailjs.sendForm(
             'service_sbiymjy',
-            'template_2dc0n9n',
-            {
-                from_name: formData.name,
-                to_name: 'Salman Mahmud',
-                from_email: formData.email,
-                to_email: "salman_mahmud@hotmail.com",
-                message: formData.message
-            },
+            'template_erjoilp',
+            form.current,
             "rE4Kp25eDDw9xd_wd"
          )
          .then(() => {
             setLoading(false)
             alert("Thank you for reaching out! Your message has just been sent to my email. I will be in touch ASAP!")
-            setFormData({
-                name: '',
-                email: '',
-                message: ''
-            })
+            e.target.reset()
          }, (error) => {
             setLoading(false)
 
@@ -48,17 +49,6 @@ function ContactSection() {
 
         console.log("submitted")
     }
-
-    const handleChange = (e) => {
-        const {name, value } = e.target
-
-        setFormData({...formData, [name]: value})
-    }
-
-
-    const isFormFilled = formData.name !== "" && formData.email !== "" && formData.message !== "";
-
-    console.log('isFormFilled:', isFormFilled)
 
 
 
@@ -72,10 +62,13 @@ function ContactSection() {
         </motion.div>
 
         <motion.div initial={{ opacity: 0}} whileInView={{ opacity: 1}} transition={{ duration: 2 }} viewport={{once:true}} className='items-center justify-center flex'>
-            <form onSubmit={handleSubmit} className='flex flex-col md:w-1/2 bg-gradient-to-b from-blue-400 to-blue-400/50 p-8 rounded-3xl'>
-                <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder='Your Name' className='p-2 bg-transparent border-2 rounded-md focus:outline-none placeholder-black ' />
-                <input type="text" name="email" value={formData.email} onChange={handleChange} placeholder='Email' className='p-2 my-8 bg-transparent border-2 rounded-md focus:outline-none placeholder-black' />
-                <textarea name='message' rows="10" value={formData.message} onChange={handleChange} placeholder='Enter Message...' className='p-2 bg-transparent border-2 rounded-md focus:outline-none placeholder-black'>
+            <form ref={form} onSubmit={handleSubmit} className='flex flex-col md:w-1/2 bg-gradient-to-b from-blue-400 to-blue-400/50 p-8 rounded-3xl'>
+                <input type="text" name="user_name" value={formData.user_name} onChange={handleChange}   placeholder='Your Name' className='p-2 bg-transparent border-2 rounded-md focus:outline-none placeholder-black ' />
+
+                <input type="text" name="user_email" value={formData.user_email} onChange={handleChange} placeholder='Email' className='p-2 my-8 bg-transparent border-2 rounded-md focus:outline-none placeholder-black' />
+
+                <textarea name='message' rows="10" value={formData.message} onChange={handleChange}  placeholder='Enter Message...' className='p-2 bg-transparent border-2 rounded-md focus:outline-none placeholder-black'>
+
                 </textarea>
                 
 
@@ -87,6 +80,8 @@ function ContactSection() {
                 <button disabled className='disabled:opacity-50 bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 mt-8 mx-auto flex items-center rounded-lg'>
                     {loading ? "Sending..." : "Send Message"}
                 </button>}
+
+                
                 
 
             </form>
