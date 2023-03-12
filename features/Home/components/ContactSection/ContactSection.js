@@ -39,7 +39,11 @@ function ContactSection() {
          .then(() => {
             setLoading(false)
             alert("Thank you for reaching out! Your message has just been sent to my email. I will be in touch ASAP!")
-            e.target.reset()
+            setFormData({
+                name: '',
+                email: '',
+                message: ''
+            })
          }, (error) => {
             setLoading(false)
 
