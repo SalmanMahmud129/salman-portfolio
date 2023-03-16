@@ -17,6 +17,7 @@ import SkillsSection from '@/features/Home/components/SkillsSection'
 import ContactSection from '@/features/Home/components/ContactSection/ContactSection'
 
 
+
 const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
 
