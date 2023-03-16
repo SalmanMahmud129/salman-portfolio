@@ -6,7 +6,7 @@ export default function App({ Component, pageProps }) {
 
   <>
   <Head>
-    <title>Salman's Portfolio</title>
+    <title>Salman&apos;s Portfolio</title>
     <link rel='shortcut icon' href='/wave.png' />
   </Head>
   
