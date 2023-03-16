@@ -91,10 +91,10 @@ function ResumePopup({handleShowResume}){
         }
 
 
-        <iframe src="https://drive.google.com/file/d/1ug14Tl-7hIqi1uoah-NTg5GxaA9jS-Xk/preview" width="100%" height="100%" allow="autoplay" onLoad={handleLoadStatus} style={{display: isLoading ? "none" : "block"}} className='min-w-fit' />
+        <iframe src="https://drive.google.com/file/d/1uORjw548jGPYUlROsiFM14I6CymF1-mu/preview" width="100%" height="100%" allow="autoplay" onLoad={handleLoadStatus} style={{display: isLoading ? "none" : "block"}} className='min-w-fit' />
         
         <div className='mt-10'>
-        <a href='https://drive.google.com/uc?export=download&id=1ug14Tl-7hIqi1uoah-NTg5GxaA9jS-Xk' target='_blank' rel='noreferrer'>
+        <a href='https://drive.google.com/uc?export=download&id=1uORjw548jGPYUlROsiFM14I6CymF1-mu' target='_blank' rel='noreferrer'>
         <button className="sm:hidden mx-auto md:flex items-center p-2 text-xl font-light duration-200 cursor-pointer group rounded-xl w-30 bg-gradient-to-r from-cyan-500 to-blue-500 hover:scale-110 hover:bg-slate-200 hover:text-black">
               Download <span className='group-hover:animate-bounce'><ResumeIcon height="5%" width="2rem" /></span>
         </button>
