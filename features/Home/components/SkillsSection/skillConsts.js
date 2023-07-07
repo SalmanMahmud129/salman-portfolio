@@ -14,6 +14,12 @@ import { GitHubIcon } from "@/features/common/Icons/GithubIcon"
 import { LogosPostmanIcon } from "@/features/common/Icons/PostmanIcon"
 import { LogosStripe } from "@/features/common/Icons/StripeIcon"
 import { TablerBrandFramerMotion } from "@/features/common/Icons/FramerMotion"
+import { SqlServer } from "@/features/common/Icons/SqlServer"
+import { Firebase } from "@/features/common/Icons/Firebase"
+import { Java } from "@/features/common/Icons/Java"
+import { Python } from "@/features/common/Icons/Python"
+import { Ubuntu } from "@/features/common/Icons/Ubuntu"
+
 
 
 export const skills = [
@@ -43,6 +49,30 @@ export const skills = [
         id: 5,
         skill: "Ruby on Rails",
         Icon: LogosRails
+    },
+    {
+        id: 18,
+        skill: "Python",
+        Icon: Python
+
+    },
+    {
+        id: 19,
+        skill: "Java 17",
+        Icon: Java
+
+    },
+    {
+        id: 20,
+        skill: "Firebase",
+        Icon: Firebase
+
+    },
+    {
+        id: 17,
+        skill: "SQL Server",
+        Icon: SqlServer
+
     },
     {
         id: 6,
@@ -98,6 +128,11 @@ export const skills = [
         id: 15,
         skill: "Stripe",
         Icon: LogosStripe
+    },
+    {
+        id: 21,
+        skill: "Ubuntu (WSL)",
+        Icon: Ubuntu
     }
 
 ]
